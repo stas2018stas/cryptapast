@@ -1,3 +1,4 @@
 # CRYPTAPAST
 ***VERSION 1.0.0.0***
-Crypter for files with database support!
+Crypter for files!
+You can encript and decrypt files! Keys will be store in special file!
