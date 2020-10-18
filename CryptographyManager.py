@@ -1,10 +1,11 @@
 import os
 import uuid
 import time
+from WTFManager import WTFManager as wtf
 
 class CryptographyManager():
 
-	def crypt(dir):
+	def encrypt(dir):
 		os.system("color 4")
 		import pyAesCrypt
 		print("----------------")
@@ -14,9 +15,19 @@ class CryptographyManager():
 		pyAesCrypt.encryptFile(str(dir), str(dir) + ".aes", password, bufferSize)
 		os.remove(dir)
 		print("YOUR FILE WAS SUCCESFULLY CRYPTED!")
-		print(key)
+		print("If you want to decrypt your file, see output.txt file into this programm folder")
+		input("Press Enter for finished process!")
+		os.system("color 7")
+		# wtf.initalize("output.txt")
+		f = open("output.txt", 'a')
+		wtf.writeToFile(f, "Your key for decryption " + str(dir) + " file:")
+		wtf.writeToFile(f, key)
+		wtf.writeToFile(f, "")
+		wtf.closeWrite(f)
 
-	def encript(edir):
+
+	def decrypt(edir):
+		os.system("color 2")
 		import pyAesCrypt
 		print("----------------")
 		password = input("Enter key to decrypt your files: ")
@@ -29,5 +40,5 @@ class CryptographyManager():
 		except:
 			time.sleep(1)
 			print("WRONG KEY!")
-			CryptographyManager.encript(edir)
+			CryptographyManager.encrypt(edir)
 		os.system("color 7")
