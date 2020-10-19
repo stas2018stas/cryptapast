@@ -3,10 +3,13 @@ import uuid
 import time
 import sqlite3
 from CryptographyManager import CryptographyManager as cm
+from LogoManager import LogoManager as lm
 
+VERSION = "VERSION V1.1.0.0"
 
 # LOGO
-print("CRYPTAPAST V1.0.0.0")
+lm.printLogo()
+lm.printVersion(VERSION)
 
 # MAIN
 file = input("Enter file name(without .aes if you want to decrypt): ")
