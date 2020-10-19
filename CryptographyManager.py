@@ -18,7 +18,6 @@ class CryptographyManager():
 		print("If you want to decrypt your file, see output.txt file into this programm folder")
 		input("Press Enter for finished process!")
 		os.system("color 7")
-		# wtf.initalize("output.txt")
 		f = open("output.txt", 'a')
 		wtf.writeToFile(f, "Your key for decryption " + str(dir) + " file:")
 		wtf.writeToFile(f, key)
