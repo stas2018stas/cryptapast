@@ -1,7 +1,6 @@
 import os
 import uuid
 import time
-import sqlite3
 from CryptographyManager import CryptographyManager as cm
 from LogoManager import LogoManager as lm
 
@@ -9,7 +8,7 @@ VERSION = "VERSION V1.1.0.0"
 
 # LOGO
 lm.printLogo()
-lm.printVersion(VERSION)
+print(VERSION)
 
 # MAIN
 file = input("Enter file name(without .aes if you want to decrypt): ")

@@ -15,10 +15,11 @@ class CryptographyManager():
 		pyAesCrypt.encryptFile(str(dir), str(dir) + ".aes", password, bufferSize)
 		os.remove(dir)
 		print("YOUR FILE WAS SUCCESFULLY CRYPTED!")
-		print("If you want to decrypt your file, see output.txt file into this programm folder")
+		print("If you want to decrypt your file, see output.txt into your Documents folder.")
 		input("Press Enter for finished process!")
 		os.system("color 7")
-		f = open("output.txt", 'a')
+		from os.path import expanduser
+		f = open(expanduser("~") + "\\Documents\\output.txt", 'a')
 		wtf.writeToFile(f, "Your key for decryption " + str(dir) + " file:")
 		wtf.writeToFile(f, key)
 		wtf.writeToFile(f, "")
