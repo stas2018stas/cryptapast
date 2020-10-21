@@ -2,6 +2,7 @@ import os
 import uuid
 import time
 from WTFManager import WTFManager as wtf
+from TimeManager import TimeManager as dtm
 
 class CryptographyManager():
 
@@ -20,7 +21,7 @@ class CryptographyManager():
 		os.system("color 7")
 		from os.path import expanduser
 		f = open(expanduser("~") + "\\Documents\\output.txt", 'a')
-		wtf.writeToFile(f, "Your key for decryption " + str(dir) + " file:")
+		wtf.writeToFile(f, "Your key for decryption " + str(dir) + " file in " + str(dtm.timeNow()) + ":")
 		wtf.writeToFile(f, key)
 		wtf.writeToFile(f, "")
 		wtf.closeWrite(f)
